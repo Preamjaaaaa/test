@@ -1,0 +1,63 @@
+local
+		git --version
+		git config --global user.email ""
+		git config --global user.name ""
+		git config --list
+		clear
+	สร้างไฟล์
+		touch ชื่อไฟล์
+	สร้าง repository
+		git init
+	เพิ่มไฟล์
+		git add ชื่อไฟล์
+		git add .
+	ลบไฟล์
+		git rm -r --cached .
+		git rm -r --cached ชื่อไฟล์
+	ตรวจสอบสถานะ
+		git status
+	บันทึกเข้า repository
+		git commit -m "ชื่อการเปลี่ยนแปลง"
+	ตรวจสอบการเปลี่ยนแปลง
+		git log
+		git log --oneline
+		git log --graph
+	เปรียบเทียบ version
+		git diff
+		git diff id_version2 id_version1
+	ยกเลิกการแก้ไข
+		git checkout ชื่อไฟล์
+	ลบออกจาก add
+		git reset ชื่อไฟล์
+		git reset .
+	ย้อนคืน version
+		git reset --option id_version
+			option
+				soft ลบแล้วไม่ทำลาย
+				mixed 
+				hard ลบและทำลายไฟล์
+	แตกกิ่ง(branch)
+		แสดงชื่อการแตกกิ่ง
+			git branch
+		การสร้าง
+			git checkout -b ชื่อbranch ห้ามเว้นวรรค
+		ลบ branch
+			git branch -b ชื่อbranch
+		สลับไป branch ที่ต้องการ
+			git checkout ชื่อbranch
+		การรวม branch
+			git merge ชื่อbranch
+
+update to server
+	สร้าง repository ใน github
+		git branch -M main
+		git remote add origin https://github.com/Preamjaaaaa/test.git
+		git push -u origin main
+	ดึง+รวม
+		git pull
+	เพิ่มไฟล์ update server
+		git push
+	clone แชร์ให้เพื่อน
+		สร้างไฟล์
+		git clone https://github.com/Preamjaaaaa/test.git
+		
